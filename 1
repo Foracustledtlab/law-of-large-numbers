@@ -1,0 +1,14 @@
+import numpy as np
+import random
+import matplotlib.pyplot as plt
+len = 10000
+
+if __name__ == '__main__':
+    x = [i for i in range(len)]
+    y = [random.random() for i in range(len)]
+    y_avg = [np.mean(y[0:i+1]) for i in range(len)]
+    plt.plot(x,y_avg)
+    plt.xlim(0,len)
+    plt.ylim(0,1)
+    plt.grid(True)
+    plt.show()
